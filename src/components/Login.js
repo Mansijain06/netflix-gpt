@@ -46,8 +46,6 @@ const Login = () => {
                     // An error occurred
                     setErrorMessage(error.message);
                 });
-
-                console.log(user);
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -60,13 +58,11 @@ const Login = () => {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                console.log(user);
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 const apiError = error?.customData?.serverResponse?.error; // REST shape { code: 400, message: "INVALID_LOGIN_CREDENTIALS", ... }
-                // console.log(error);
                 if (errorCode === "auth/invalid-credential" || apiError?.code === 400 || apiError?.message === "INVALID_LOGIN_CREDENTIALS") {
                     setErrorMessage("Invalid credentials");
                 } else {

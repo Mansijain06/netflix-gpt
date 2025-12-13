@@ -16,8 +16,8 @@
   - firebase deploy
 - create sign in/ sign up account
 - create redux store to store user login info - (user slice)
-
-
+- Get data from TMDB api call
+-
 
 # FEATURES
 
