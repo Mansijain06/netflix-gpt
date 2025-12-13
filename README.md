@@ -22,6 +22,8 @@
 - create videobrackground and title component
 - fetch data & trailer video
 - embbed youtube video
+- Secondary container
+- scroll list
 
 # FEATURES
 
