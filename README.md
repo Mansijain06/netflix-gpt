@@ -17,7 +17,11 @@
 - create sign in/ sign up account
 - create redux store to store user login info - (user slice)
 - Get data from TMDB api call
--
+- custom for video
+- custom hook for video details
+- create videobrackground and title component
+- fetch data & trailer video
+- embbed youtube video
 
 # FEATURES
 
