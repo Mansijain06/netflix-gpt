@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 import { API_OPTIONS } from '../utils/constant';
 import { addPopularMovies } from '../utils/moviesSlice';
 import { useDispatch, useSelector } from 'react-redux';

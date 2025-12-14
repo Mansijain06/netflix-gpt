@@ -1,4 +1,3 @@
-import React from 'react'
 import { useSelector } from 'react-redux'
 import MovieList from "./MovieList"
 const GptMovieSuggestion = () => {
@@ -8,9 +7,9 @@ const GptMovieSuggestion = () => {
   if(!movieNames || !movieResults) return null;
 
   return (
-    <div className='p-4 m-4 bg-black text-white opacity-80'>
+    <div className='p-4 m-4 bg-black text-white opacity-90'>
       <h1 className='text-3xl font-bold mb-4'>Recommended Movies</h1>
-      <div className='flex flex-wrap'>
+      <div className='flex flex-wrap justify-center'>
         {movieNames.map((movieName, index) => {
           const movie = movieResults[index];
           // Wrap single movie in array and add safety check

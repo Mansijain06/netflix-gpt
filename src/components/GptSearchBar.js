@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { lang } from "../utils/languageConstants";
 import { useSelector, useDispatch } from 'react-redux';
 import { searchMovies } from '../utils/aiSearch';
@@ -30,7 +30,7 @@ const GptSearchBar = () => {
     try {
       // Get movie recommendations from AI
       const movieNames = await searchMovies(searchText.current.value);
-      console.log("Recommended Movies:", movieNames);
+      // console.log("Recommended Movies:", movieNames);
 
       // Search for each movie in TMDB API
       const moviePromises = movieNames.map(async (movieName) => {
@@ -65,10 +65,10 @@ const GptSearchBar = () => {
   }
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="pt-[30%] md:pt-[10%] flex flex-col items-center">
       <form 
         action="" 
-        className="bg-black p-3 mt-[10%] flex gap-4 w-[50%] justify-center" 
+        className="bg-black p-3 flex gap-4 w-full md:w-[50%] justify-center" 
         onSubmit={(e) => {
           e.preventDefault();
           handleGptSearchClick();

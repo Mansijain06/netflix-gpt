@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch, useSelector } from "react-redux";
@@ -51,13 +51,13 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-screen bg-gradient-to-b from-black z-10 flex justify-between">
-      <img className="w-44" src={LOGO} alt="netflix logo" />
+    <div className="absolute w-screen bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
+      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="netflix logo" />
       {user && (
-        <div className="flex gap-2 items-center m-4">
+        <div className="flex justify-between gap-2 items-center m-4">
           {isGptSearch && (
             <select
-              className="p-2 m-2 rounded bg-slate-700 text-white"
+              className="p-1 md:p-2 m-1 md:m-2 rounded bg-slate-700 text-white"
               onChange={(e) => onlanguagechange(e)}
               name="lang"
               id="lang"
@@ -70,15 +70,17 @@ const Header = () => {
             </select>
           )}
           <button
-            className="rounded-lg py-2 px-4 bg-purple-700 text-white mx-2"
+            className="rounded-lg py-1 md:py-2 px-2 md:px-4 bg-purple-700 text-white mx-2"
             onClick={handleGptSearchClick}
           >
             {isGptSearch ? "Homepage" : "GPT Search"}
           </button>
-          <img className="w-8 h-8" src={USER_LOGO} alt="user icon" />
-          <button onClick={handleSignout} className="text-white font-bold">
-            (Sign out)
-          </button>
+          <div className="flex">
+            <img className="w-6 md:w-8 h-6 md:h-8" src={USER_LOGO} alt="user icon" />
+            <button onClick={handleSignout} className="text-white font-bold">
+              (Sign out)
+            </button>
+          </div>
         </div>
       )}
     </div>
