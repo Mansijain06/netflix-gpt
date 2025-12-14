@@ -24,6 +24,11 @@
 - embbed youtube video
 - Secondary container
 - scroll list
+- custom hook
+- GPT search feature
+- Multi language feature
+- Language slice
+- Integarte GPT API's (get openAI key)
 
 # FEATURES
 
