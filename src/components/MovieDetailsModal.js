@@ -71,7 +71,7 @@ const MovieDetailsModal = ({ movieId, onClose }) => {
                 <span className="text-green-500 font-semibold">
                   {movieDetails.vote_average?.toFixed(1)} ⭐
                 </span>
-                <span>{movieDetails.release_date?.split('-')[0]}</span>
+                <span>{movieDetails.release_date}</span>
                 <span>{movieDetails.runtime} min</span>
                 {movieDetails.genres?.map((genre) => (
                   <span
