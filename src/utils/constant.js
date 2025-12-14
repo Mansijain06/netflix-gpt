@@ -6,7 +6,7 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMDc0OWFkYjZjYzc0OTdhNTUzMGE5MzJjM2NmN2MwNCIsIm5iZiI6MTYwNzg2OTMwNi42NTEsInN1YiI6IjVmZDYyMzdhZDQ4Y2VlMDAzYzczOWE3OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lIQEt02fllR5tODUMKY4WpSU2hr0sukX6oYzSpZEA7c'
+    Authorization: 'Bearer ' + process.env.REACT_APP_TNDB_KEY
   }
 };
 
@@ -21,6 +21,5 @@ export const SUPPORTED_LANGUAGES = [
   {identifier: "spanish", name: "Spanish"},
 ]
 
-
-export const GROQ_API_KEY = "YOUR_GROQ_API_KEY"; // Replace with free API key
+export const GROQ_API_KEY = "YOUR_GROQ_API_KEY"; // Replace with your free API key
 
