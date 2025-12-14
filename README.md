@@ -29,6 +29,7 @@
 - Multi language feature
 - Language slice
 - Integarte GPT API's (get openAI key) - platform.openai.com
+- responsive design
 
 # FEATURES
 
