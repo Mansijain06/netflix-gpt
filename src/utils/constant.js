@@ -20,3 +20,7 @@ export const SUPPORTED_LANGUAGES = [
   {identifier: "hindi", name: "Hindi"},
   {identifier: "spanish", name: "Spanish"},
 ]
+
+
+export const GROQ_API_KEY = "YOUR_GROQ_API_KEY"; // Replace with free API key
+

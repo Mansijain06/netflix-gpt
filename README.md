@@ -28,7 +28,7 @@
 - GPT search feature
 - Multi language feature
 - Language slice
-- Integarte GPT API's (get openAI key)
+- Integarte GPT API's (get openAI key) - platform.openai.com
 
 # FEATURES
 
