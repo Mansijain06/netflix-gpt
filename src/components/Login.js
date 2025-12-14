@@ -67,7 +67,17 @@ const Login = () => {
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          setErrorMessage(errorCode + "-" + errorMessage);
+          // setErrorMessage(errorCode + "-" + errorMessage);
+
+          if (errorCode === "auth/email-already-in-use") {
+            setErrorMessage("This email is already registered. Please sign in or use a different email.");
+          } else if (errorCode === "auth/weak-password") {
+            setErrorMessage("Password should be at least 6 characters.");
+          } else if (errorCode === "auth/invalid-email") {
+            setErrorMessage("Please enter a valid email address.");
+          } else {
+            setErrorMessage(error.message || "An error occurred. Please try again.");
+          }
         });
     } else {
       // sign in
