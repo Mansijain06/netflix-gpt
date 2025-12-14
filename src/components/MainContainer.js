@@ -11,7 +11,7 @@ const MainContainer = () => {
     
   return (
     <div className='pt-[20%] bt-black md:pt-0 relative'>
-        <VideoTitle title={title} overview={overview}/>
+        <VideoTitle title={title} overview={overview} movieId={id}/>
         <VideoBackground movieId={id}/>
     </div>
   )
